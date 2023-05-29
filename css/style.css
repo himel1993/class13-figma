@@ -1,0 +1,249 @@
+/** COMMON CSS  */
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primaryFont: "Poppins", sans-serif;
+  --secondaryFont: "PT Sans", sans-serif;
+  --primaryColor: #ffcc00;
+  --headingColor: #353535;
+  --bgGradient: linear-gradient(95.13deg, #ffcc00 -21.46%, #fff5cb 112.13%);
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 1110px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+body {
+  font-family: var(--primaryFont);
+}
+
+.align-center {
+  align-items: center;
+}
+
+/** COMMON CSS  */
+
+/* * NAV STARTS HERE */
+nav .logo {
+  width: 30%;
+}
+nav .menu {
+  width: 70%;
+  text-align: right;
+}
+
+nav .menu ul li {
+  display: inline-block;
+}
+
+nav .menu ul li a {
+  padding: 26px 22px 15px 22px;
+  display: block;
+
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 200%;
+  color: var(--headingColor);
+  position: relative;
+  text-transform: uppercase;
+}
+
+nav .menu ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--headingColor);
+  transition: 0.35s;
+}
+
+nav .menu ul li:hover a::after {
+  width: 100%;
+}
+
+nav .logo {
+  align-self: center;
+}
+
+/* * NAV ENDS HERE */
+
+/* * BANNER STARTS HERE */
+#banner {
+  position: relative;
+}
+#banner .banner_img {
+  width: 45%;
+}
+#banner .banner_cnt {
+  width: 55%;
+}
+
+.banner_cnt {
+  color: var(--headingColor);
+}
+.banner_cnt h5 {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.banner_cnt h2 {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 83px;
+}
+
+.banner_cnt p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 180%;
+}
+
+.banner_img img {
+  width: 100%;
+}
+
+.followSocialLink ul li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.followSocialLink ul li a {
+  width: 40px;
+  height: 40px;
+  background-color: #f4f3f3;
+  display: block;
+  color: #000;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  transform: rotate(45deg);
+}
+
+.floatingImage {
+  position: absolute;
+  left: 50%;
+  bottom: -50px;
+}
+
+/* * BANNER STARTS HERE */
+
+#timeline {
+  margin: 80px 0;
+  position: relative;
+}
+
+#timeline::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  border-right: 2px dashed #888;
+  top: 0;
+  left: 28%;
+}
+
+.contentArea {
+  padding: 50px 0;
+}
+.leftContent {
+  width: 30%;
+}
+.rightContent {
+  width: 70%;
+  position: relative;
+}
+
+.rightContent::after {
+  content: "";
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: -50px;
+  left: -89px;
+  z-index: 99;
+  border: 2px dashed #888;
+}
+
+.rightContent::before {
+  content: "";
+  position: absolute;
+  top: -36px;
+  left: -76px;
+  width: 20px;
+  height: 20px;
+  background-color: #52ab70;
+  border-radius: 50%;
+  z-index: 100;
+}
+
+.contentArea:nth-child(2) .rightContent::before {
+  background-color: #f17676;
+}
+.contentArea:nth-child(3) .rightContent::before {
+  background-color: #f17676;
+}
+
+.progressbar {
+  width: 380px;
+  height: 6px;
+  margin-top: 30px;
+  border-radius: 50px;
+  background-color: #d9d9d9;
+}
+
+.progress {
+  position: relative;
+
+  height: 100%;
+  border-radius: 50px;
+  text-align: right;
+}
+
+.progress span {
+  right: 0;
+  top: -25px;
+  position: absolute;
+}
+
+.contentArea form input {
+  width: 455px;
+  height: 82px;
+  background-color: #fff;
+  border-radius: 16px 0 0 16px;
+  border: none;
+  border: 1px solid #ccc;
+  padding: 0 30px;
+}
+
+.contentArea form button {
+  width: 132px;
+  background-color: #ff6565;
+  border-radius: 0 16px 16px 0;
+  border: none;
+}
